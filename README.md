@@ -7,8 +7,10 @@ https://youtube.com/playlist?list=PLlBVuTSjOrckzVWHWOYAkyKoQZhmoqH1S&si=hYOSTgE0
 
 Lesson_1:
 Controlling the DC motors in forward and backward motion and stopping it.
+========================================================================================
 
 Components Required are:
+
 ![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/4f753a37-cf73-474b-a313-128aadf4bdd3)
 
 The circuit diagram for this part is attached as below.
@@ -24,8 +26,11 @@ The Output Video is as below:
 https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/09d4132a-fedf-4679-8c74-2049de6cc789
 
 
+
+
 Lesson_2:
 Controlling the DC motors in forward and backward motion and turning left and right and stopping.
+========================================================================================
 
 Components Required are:
 
@@ -49,6 +54,7 @@ https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/30757
 
 Lesson_3:
 Controlling the speed of the DC Motors in all forward,backward,right,left direction using analog write command
+========================================================================================
 
 The previous code is for the forward motion of the motors, but due to the internal resistance of the motors or unsymmetrical design of the real life car, there might be some 
 errors that cause the car to disbalance and not move completely forward. We use the analog command to use PWM method to control the speed of the mototrs individually. It is a trial and error method to get the correct right and left speed of the car. Once we get the correct speed we inser then in the code as left_speed and right_speed.
