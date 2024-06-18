@@ -9,7 +9,6 @@ Lesson_1:
 Controlling the DC motors in forward and backward motion and stopping it.
 
 Components Required are:
-
 ![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/4f753a37-cf73-474b-a313-128aadf4bdd3)
 
 The circuit diagram for this part is attached as below.
@@ -47,6 +46,30 @@ https://www.tinkercad.com/things/1dqA0yPc91p-copy-of-controlling-motor-forward-a
 
 The Output Video is as below:
 https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/307574b6-367b-466a-8ea4-c5f073460132
+
+Lesson_3:
+Controlling the speed of the DC Motors in all forward,backward,right,left direction using analog write command
+
+The previous code is for the forward motion of the motors, but due to the internal resistance of the motors or unsymmetrical design of the real life car, there might be some 
+errors that cause the car to disbalance and not move completely forward. We use the analog command to use PWM method to control the speed of the mototrs individually. It is a trial and error method to get the correct right and left speed of the car. Once we get the correct speed we inser then in the code as left_speed and right_speed.
+
+Components Required are:
+
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/9737bbf3-4d04-4ea6-968a-ba3297631774)
+
+The circuit diagram for this part is attached as below:
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/c0fb1416-7ca5-42de-821e-a05e0649d655)
+
+The schematic diagram for the circuit is as below:
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/45faf2a0-0aff-4695-8316-08c0bbf7bc03)
+
+The TINKERCAD link to this part is as below:
+https://www.tinkercad.com/things/lLZ1DY4hY3C-arduino-car-l3?sharecode=2iRYl9ByAPtlIzCGDlzI6xkF5IhevtN8CeGrkDWia84
+
+The Output Video is as below:
+https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/af4a147b-ace4-406b-8705-55ed020aacec
+
+
 
 
 
