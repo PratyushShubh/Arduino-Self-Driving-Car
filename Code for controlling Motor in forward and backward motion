@@ -1,0 +1,30 @@
+//code to run motor on and off
+int backwardpin=12;
+int forwardpin=11;
+//negative of the motor terminal
+void setup(){
+  pinMode(backwardpin,OUTPUT);
+  pinMode(forwardpin,OUTPUT);
+}//setting motor pin as output
+void loop()
+{
+  spinforward(1000);
+  stopmotor(1000);
+  spinbackward(1000);
+}
+
+void stopmotor(int delay_time){
+  digitalWrite(backwardpin,LOW);
+  digitalWrite(forwardpin,LOW);
+  delay(delay_time);
+}
+void spinforward(int delay_time){
+  digitalWrite(backwardpin,LOW);
+  digitalWrite(forwardpin,HIGH);
+  delay(delay_time);
+}
+void spinbackward(int delay_time){
+  digitalWrite(backwardpin,HIGH);
+  digitalWrite(forwardpin,LOW);
+  delay(delay_time);
+}
