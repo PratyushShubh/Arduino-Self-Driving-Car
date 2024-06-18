@@ -1,0 +1,76 @@
+//code to control motors(left and right)
+//code helps car to move forward, backward, take a right and left turn and stop
+int Leftbackwardpin=12;
+int Leftforwardpin=11;
+int Rightforwardpin=9;
+int Rightbackwardpin=10;
+int leftmotorspeedpin=6;
+int rightmotorspeedpin=5;
+//negative of the motor terminal
+void setup(){
+  pinMode(Leftbackwardpin,OUTPUT);
+  pinMode(Leftforwardpin,OUTPUT);
+  pinMode(Rightbackwardpin,OUTPUT);
+  pinMode(Rightforwardpin,OUTPUT);
+  pinMode(leftmotorspeedpin,OUTPUT);
+  pinMode(rightmotorspeedpin,OUTPUT);
+  }//setting motor pin as output
+void loop()
+{
+  //experiment with these values of 255,128 suitable for the car
+  //for which the car moves forward in a straight line
+  //without having an impact of internal resistance
+ driveforward(3000,255,128);
+ stopmotor(1000);
+ driveforward(3000,128,255);
+ stopmotor(1000);
+ turnright(3000,255,128);
+ stopmotor(1000);
+ turnleft(3000,128,255);
+ stopmotor(1000);
+  
+}
+
+void stopmotor(int delay_time){
+  digitalWrite(Leftbackwardpin,LOW);
+  digitalWrite(Leftforwardpin,LOW);
+  digitalWrite(Rightbackwardpin,LOW);
+  digitalWrite(Rightforwardpin,LOW);
+  delay(delay_time);
+}
+void driveforward(int delay_time, int right_speed,int left_speed){
+  analogWrite(rightmotorspeedpin,right_speed);
+  analogWrite(leftmotorspeedpin,left_speed);
+  digitalWrite(Leftbackwardpin,LOW);
+  digitalWrite(Leftforwardpin,HIGH);
+  digitalWrite(Rightbackwardpin,LOW);
+  digitalWrite(Rightforwardpin,HIGH);
+  delay(delay_time);
+}
+void drivebackward(int delay_time, int right_speed,int left_speed){
+  analogWrite(rightmotorspeedpin,right_speed);
+  analogWrite(leftmotorspeedpin,left_speed);
+  digitalWrite(Leftbackwardpin,HIGH);
+  digitalWrite(Leftforwardpin,LOW);
+  digitalWrite(Rightbackwardpin,HIGH);
+  digitalWrite(Rightforwardpin,LOW);
+  delay(delay_time);
+}
+void turnright(int delay_time, int right_speed,int left_speed){
+  analogWrite(rightmotorspeedpin,right_speed);
+  analogWrite(leftmotorspeedpin,left_speed);
+  digitalWrite(Leftbackwardpin,LOW);
+  digitalWrite(Leftforwardpin,HIGH);
+  digitalWrite(Rightbackwardpin,HIGH);
+  digitalWrite(Rightforwardpin,LOW);
+  delay(delay_time);
+}
+void turnleft(int delay_time, int right_speed,int left_speed){
+  analogWrite(rightmotorspeedpin,right_speed);
+  analogWrite(leftmotorspeedpin,left_speed);
+  digitalWrite(Leftbackwardpin,HIGH);
+  digitalWrite(Leftforwardpin,LOW);
+  digitalWrite(Rightbackwardpin,LOW);
+  digitalWrite(Rightforwardpin,HIGH);
+  delay(delay_time);
+}
