@@ -20,6 +20,7 @@ The schematic diagram for the circuit is as below:
 
 The TINKERCAD link to this part is as below:
 https://www.tinkercad.com/things/eHN8Ka1tjP4-grand-crift-borwo
+
 The Output Video is as below:
 https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/09d4132a-fedf-4679-8c74-2049de6cc789
 
