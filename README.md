@@ -25,5 +25,30 @@ The Output Video is as below:
 https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/09d4132a-fedf-4679-8c74-2049de6cc789
 
 
+Lesson_2:
+Controlling the DC motors in forward and backward motion and turning left and right and stopping.
+
+Components Required are:
+
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/b53dc295-d6a9-4d11-939c-d16850d042f1)
+
+The circuit diagram for this part is attached as below:
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/be316e8c-d1b9-4745-8c34-613548e8316b)
+
+
+
+The schematic diagram for the circuit is as below:
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/b79416ae-0114-44c0-a935-b3a4a336e8ce)
+
+
+
+The TINKERCAD link to this part is as below:
+https://www.tinkercad.com/things/1dqA0yPc91p-copy-of-controlling-motor-forward-and-backward
+
+The Output Video is as below:
+https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/307574b6-367b-466a-8ea4-c5f073460132
+
+
+
 
 
