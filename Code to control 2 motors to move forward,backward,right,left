@@ -1,0 +1,61 @@
+//code to control motors(left and right)
+//code helps car to move forward, backward, take a right and left turn and stop
+int Leftbackwardpin=12;
+int Leftforwardpin=11;
+int Rightforwardpin=9;
+int Rightbackwardpin=10;
+//negative of the motor terminal
+void setup(){
+  pinMode(Leftbackwardpin,OUTPUT);
+  pinMode(Leftforwardpin,OUTPUT);
+  pinMode(Rightbackwardpin,OUTPUT);
+  pinMode(Rightforwardpin,OUTPUT);
+}//setting motor pin as output
+void loop()
+{
+ driveforward(3000);
+ stopmotor(1000);
+ drivebackward(3000);
+ stopmotor(1000);
+ turnright(2000);
+ stopmotor(1000);
+ turnleft(2000);
+ stopmotor(1000);
+  
+}
+
+void stopmotor(int delay_time){
+  digitalWrite(Leftbackwardpin,LOW);
+  digitalWrite(Leftforwardpin,LOW);
+  digitalWrite(Rightbackwardpin,LOW);
+  digitalWrite(Rightforwardpin,LOW);
+  delay(delay_time);
+}
+void driveforward(int delay_time){
+  digitalWrite(Leftbackwardpin,LOW);
+  digitalWrite(Leftforwardpin,HIGH);
+  digitalWrite(Rightbackwardpin,LOW);
+  digitalWrite(Rightforwardpin,HIGH);
+  delay(delay_time);
+}
+void drivebackward(int delay_time){
+  digitalWrite(Leftbackwardpin,HIGH);
+  digitalWrite(Leftforwardpin,LOW);
+  digitalWrite(Rightbackwardpin,HIGH);
+  digitalWrite(Rightforwardpin,LOW);
+  delay(delay_time);
+}
+void turnright(int delay_time){
+  digitalWrite(Leftbackwardpin,LOW);
+  digitalWrite(Leftforwardpin,HIGH);
+  digitalWrite(Rightbackwardpin,HIGH);
+  digitalWrite(Rightforwardpin,LOW);
+  delay(delay_time);
+}
+void turnleft(int delay_time){
+  digitalWrite(Leftbackwardpin,HIGH);
+  digitalWrite(Leftforwardpin,LOW);
+  digitalWrite(Rightbackwardpin,LOW);
+  digitalWrite(Rightforwardpin,HIGH);
+  delay(delay_time);
+}
