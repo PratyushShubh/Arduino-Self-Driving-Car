@@ -1,0 +1,136 @@
+//code to control motors(left and right)
+//code helps car to move forward, backward, take a right and left turn and stop
+int Leftbackwardpin=12;
+int Leftforwardpin=11;
+int Rightforwardpin=9;
+int Rightbackwardpin=10;
+int leftmotorspeedpin=6;
+int rightmotorspeedpin=5;
+const int triggerpin=8;
+const int echopin=7;
+const int threshold=150;
+
+long duration;
+long cm;
+
+//negative of the motor terminal
+void setup(){
+  Serial.begin(9600);
+  pinMode(triggerpin,OUTPUT);
+  pinMode(echopin,INPUT);
+  pinMode(Leftbackwardpin,OUTPUT);
+  pinMode(Leftforwardpin,OUTPUT);
+  pinMode(Rightbackwardpin,OUTPUT);
+  pinMode(Rightforwardpin,OUTPUT);
+  pinMode(leftmotorspeedpin,OUTPUT);
+  pinMode(rightmotorspeedpin,OUTPUT);
+  }//setting motor pin as output
+void loop()
+{
+  //experiment with these values of 255,128 suitable for the car
+  //for which the car moves forward in a straight line
+  //without having an impact of internal resistance
+  digitalWrite(triggerpin,LOW);
+  delayMicroseconds(2);//give 2 us delay for a cleaner pulse
+  digitalWrite(triggerpin,HIGH);//triggering the HC-SR04
+  delayMicroseconds(10);//for this value look at the datasheet 
+  digitalWrite(triggerpin,LOW);
+
+  duration=pulseIn(echopin,HIGH);
+
+  cm=duration/58;
+
+  if(cm<threshold){
+    stopmotor(300);
+    turnright(3000,255,128);
+    driveforward(3000,255,128);
+    turnleft(3000,255,128);
+    driveforward(3000,255,128);
+    turnleft(3000,255,128);
+    driveforward(3000,255,128);
+    turnright(3000,255,128);
+    moveForwardUntilObstacle();
+  }
+  else{
+    driveforward(0,255,128);
+
+   
+  }
+
+  Serial.print(cm);
+  Serial.print("cm");
+  Serial.println();
+
+  delay(100);
+ 
+}
+
+void stopmotor(int delay_time){
+  digitalWrite(Leftbackwardpin,LOW);
+  digitalWrite(Leftforwardpin,LOW);
+  digitalWrite(Rightbackwardpin,LOW);
+  digitalWrite(Rightforwardpin,LOW);
+  delay(delay_time);
+  
+}
+void driveforward(int delay_time, int right_speed,int left_speed){
+  analogWrite(rightmotorspeedpin,right_speed);
+  analogWrite(leftmotorspeedpin,left_speed);
+  digitalWrite(Leftbackwardpin,LOW);
+  digitalWrite(Leftforwardpin,HIGH);
+  digitalWrite(Rightbackwardpin,LOW);
+  digitalWrite(Rightforwardpin,HIGH);
+  delay(delay_time);
+}
+void drivebackward(int delay_time, int right_speed,int left_speed){
+  analogWrite(rightmotorspeedpin,right_speed);
+  analogWrite(leftmotorspeedpin,left_speed);
+  digitalWrite(Leftbackwardpin,HIGH);
+  digitalWrite(Leftforwardpin,LOW);
+  digitalWrite(Rightbackwardpin,HIGH);
+  digitalWrite(Rightforwardpin,LOW);
+  delay(delay_time);
+}
+void turnright(int delay_time, int right_speed,int left_speed){
+  analogWrite(rightmotorspeedpin,right_speed);
+  analogWrite(leftmotorspeedpin,left_speed);
+  digitalWrite(Leftbackwardpin,LOW);
+  digitalWrite(Leftforwardpin,HIGH);
+  digitalWrite(Rightbackwardpin,HIGH);
+  digitalWrite(Rightforwardpin,LOW);
+  delay(delay_time);
+}
+void turnleft(int delay_time, int right_speed,int left_speed){
+  analogWrite(rightmotorspeedpin,right_speed);
+  analogWrite(leftmotorspeedpin,left_speed);
+  digitalWrite(Leftbackwardpin,HIGH);
+  digitalWrite(Leftforwardpin,LOW);
+  digitalWrite(Rightbackwardpin,LOW);
+  digitalWrite(Rightforwardpin,HIGH);
+  delay(delay_time);
+}
+
+void moveForwardUntilObstacle() {
+  while (true) {
+    long duration, distance;
+    
+    // Trigger the ultrasonic sensor
+    digitalWrite(triggerpin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(triggerpin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(triggerpin, LOW);
+    
+    // Read the echo pin
+    duration = pulseIn(echopin, HIGH);
+      cm=duration/58;
+    
+      if (cm < threshold) {
+      stopmotor(1000);
+      break;
+    } 
+    else {
+      driveforward(1000,255,128);
+    }
+  
+  }}
