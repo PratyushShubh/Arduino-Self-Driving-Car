@@ -97,6 +97,29 @@ https://www.tinkercad.com/things/esmkDhaWWXH-using-ultrasonic-sensor?sharecode=S
 The Output Video is as below:
 https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/1a8317fd-652d-4e28-a62c-ff46b5038b0e
 
+Lesson_5:
+Object detection using Ultrasonic sensor and making an algorithm to move around the obstacle
+============================================================================================
+This code will help to detect obstacles in the way. Here only a simple case is used when the car detects an object it follows the following predefined path:
+stop->turn right->move forward->turn left->move forward->turn left->move forward->turn right->move untill next object is detected
+
+Components Required are:
+
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/60bfc4e6-2e65-460f-af7c-64a8e0975e5a)
+
+The circuit diagram for this part is attached as below.
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/5e8046ba-41e4-4a88-a90e-241e2cd98ae5)
+
+The schematic diagram for the circuit is as below:
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/921e7a45-5456-4fa9-8ca0-3451b19e19a0)
+
+The TINKERCAD link to this part is as below:
+https://www.tinkercad.com/things/gyAEKhraVgw-arduino-car-l4?sharecode=O0ewfp8wHcU5zTxAFwvV4PYrQKPWl-8aL0FBwoPj9ko
+
+The Output Video is as below:
+https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/9deefe5e-122e-4a01-934c-ffabe913a004
+
+
 
 
 
