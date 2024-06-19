@@ -76,6 +76,28 @@ The Output Video is as below:
 https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/af4a147b-ace4-406b-8705-55ed020aacec
 
 
+Lesson_4:
+Using the ultrasonic sensor to detect objects and blink LED 
+========================================================================================
+
+Components Required are:
+
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/b65129a6-4b76-4942-9749-138db78ddfa8)
+
+The circuit diagram for this part is attached as below:
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/74bd95e8-59f9-4cc8-91ad-101c27f56a40)
+
+The schematic diagram for the circuit is as below:
+
+![image](https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/0f5b0787-1cbf-4cb1-815c-a373844df402)
+
+The TINKERCAD link to this part is as below:
+https://www.tinkercad.com/things/esmkDhaWWXH-using-ultrasonic-sensor?sharecode=SNakASYRnn4Gz-oD-djRLVdOa5yZ-nAsvLd9B5JCYvE
+
+The Output Video is as below:
+https://github.com/PratyushShubh/Arduino-Self-Driving-Car/assets/148980412/1a8317fd-652d-4e28-a62c-ff46b5038b0e
+
+
 
 
 
